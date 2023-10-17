@@ -24,14 +24,13 @@ public class StringKnowledge {
         } else if (choice == 2) {
             System.out.println("Type your string:");
             String text = input.nextLine();
-//            findRepeats(text);
             System.out.println("I didn't actually do Q2, but the response would go here if I had.");
         }
     }
 
-    public static boolean endOther(String text1, String text2) {
-        String flatText1 = text1.toLowerCase();
-        String flatText2 = text2.toLowerCase();
+    public static boolean endOther(String a, String b) {
+        String flatText1 = a.toLowerCase();
+        String flatText2 = b.toLowerCase();
         if (flatText1.length() == flatText2.length()) {
             return flatText1.equals(flatText2);
         } else if (flatText1.length() < flatText2.length()) {
@@ -43,7 +42,8 @@ public class StringKnowledge {
         }
     }
 
-    public static boolean findRepeats(String text1, String text2) {
+    public static boolean findRepeats(String toTest) {
+
         return false;
     }
 }
