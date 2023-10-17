@@ -24,7 +24,11 @@ public class StringKnowledge {
         } else if (choice == 2) {
             System.out.println("Type your string:");
             String text = input.nextLine();
-            System.out.println("I didn't actually do Q2, but the response would go here if I had.");
+            if (findRepeats(text)) {
+                System.out.println("There are repeats.");
+            } else {
+                System.out.println("There are no repeats.");
+            }
         }
     }
 
@@ -43,6 +47,14 @@ public class StringKnowledge {
     }
 
     public static boolean findRepeats(String toTest) {
+        for (int i = 2; i <= toTest.length() / 2; i++) {
+            for (int innerI = 0; innerI < toTest.length() - i; innerI++) {
+                if (toTest.indexOf(toTest.substring(innerI, i), innerI) >= 0) {
+                    return true;
+                }
+            }
+        }
+
 
         return false;
     }
