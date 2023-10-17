@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class LogicKnowledge {
     public static void main(String[] args) {
-        Scanner input1 = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("What would you like to do?");
         System.out.println("[1] get a green lottery ticket");
         System.out.println("[2] make chocolate");
-        int choice = input1.nextInt();
+        int choice = input.nextInt();
 
         int firstNumber;
         int secondNumber;
@@ -14,17 +14,17 @@ public class LogicKnowledge {
 
         if (choice == 1) {
             System.out.println("Please enter your three lucky integers:");
-            firstNumber = input1.nextInt();
-            secondNumber = input1.nextInt();
-            thirdNumber = input1.nextInt();
+            firstNumber = input.nextInt();
+            secondNumber = input.nextInt();
+            thirdNumber = input.nextInt();
             System.out.println("You win " + greenTicket(firstNumber, secondNumber, thirdNumber));
         } else if (choice == 2) {
             System.out.println("Please enter the number of one pound chocolate bars you will make:");
-            firstNumber = input1.nextInt();
+            firstNumber = input.nextInt();
             System.out.println("Please enter the number of five pound chocolate bars you will make:");
-            secondNumber = input1.nextInt();
+            secondNumber = input.nextInt();
             System.out.println("Please enter a goal number for how many pounds of chocolate you want to sell:");
-            thirdNumber = input1.nextInt();
+            thirdNumber = input.nextInt();
             int chocolateResult = makeChocolate(firstNumber, secondNumber, thirdNumber);
             if (chocolateResult == -1) {
                 System.out.println("Oh no! You didn't make enough chocolate.");
